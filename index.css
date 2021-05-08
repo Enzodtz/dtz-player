@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "My Custom Font";
+  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: black;
+  position: relative;
+}
+
+.video-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.controls-wrapper {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.controls-wrapper.open {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.control-next-prev-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control-next-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100%;
+  width: 50px;
+}
+.control-next-prev i {
+  transition: 0.1s;
+}
+
+.control-next-prev:hover {
+  cursor: pointer;
+}
+
+.control-next-prev:hover .control-next-prev-icon {
+  transform: scale(1.5);
+}
+
+.control-time-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px 40px;
+  width: Calc(100% - 80px);
+  text-align: center;
+}
+
+.control-time-slider {
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 50%,
+    grey 50%,
+    grey 100%
+  );
+  border-radius: 8px;
+  height: 7px;
+  width: 100%;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.control-time-slider::-webkit-slider-thumb {
+  width: 5px;
+  -webkit-appearance: none;
+  height: 15px;
+  background: black;
+}
+
+.control-play-pause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 25px;
+}
+
+.control-show-time-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin-top: 5px;
+}
