@@ -17,4 +17,4 @@ Be sure that you have `node` and `npm` installed.
 npm run dist
 ```
 
-Then install it by the way of your SO.
+Then install `dist/dtz-player.<ext>` by the way of your SO.
